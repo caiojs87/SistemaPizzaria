@@ -91,6 +91,7 @@
             this.grpOpcionais.TabIndex = 4;
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = " ESCOLHA OPCIONAIS";
+            this.grpOpcionais.Enter += new System.EventHandler(this.grpOpcionais_Enter);
             // 
             // chkTempero
             // 
