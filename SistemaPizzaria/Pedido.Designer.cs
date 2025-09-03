@@ -45,6 +45,10 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.lblPesquisar = new System.Windows.Forms.Label();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.grpOpcionais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +134,7 @@
             this.dgvPedido.Name = "dgvPedido";
             this.dgvPedido.Size = new System.Drawing.Size(475, 150);
             this.dgvPedido.TabIndex = 5;
+            this.dgvPedido.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPedido_MouseDoubleClick);
             // 
             // txtValorPizza
             // 
@@ -207,12 +212,51 @@
             this.btnSair.TabIndex = 14;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblPesquisar
+            // 
+            this.lblPesquisar.AutoSize = true;
+            this.lblPesquisar.Location = new System.Drawing.Point(480, 174);
+            this.lblPesquisar.Name = "lblPesquisar";
+            this.lblPesquisar.Size = new System.Drawing.Size(69, 13);
+            this.lblPesquisar.TabIndex = 15;
+            this.lblPesquisar.Text = "PESQUISAR";
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(562, 171);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(172, 20);
+            this.txtPesquisar.TabIndex = 16;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(332, 171);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 17;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(210, 178);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(49, 13);
+            this.lblCodigo.TabIndex = 18;
+            this.lblCodigo.Text = "CÓDIGO";
             // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.txtPesquisar);
+            this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnSalvar);
@@ -256,5 +300,9 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblPesquisar;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblCodigo;
     }
 }
